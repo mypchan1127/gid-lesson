@@ -55,15 +55,16 @@
 
     <section class="sec02">
         <form action="#" method="post">
-
-            <label for="user_name">
-                <p>お名前
+            <p>
+                <label for="user_name">
+                    <span>お名前</span>
                     <input type="text" name="user_name" id="user_name" required>
-            </label>
+                </label>
             </p>
 
-            <p><label for="email">
-                    メールアドレス
+            <p>
+                <label for="email">
+                    <span>メールアドレス</span>
                     <input type="email" name="user_email" id="user_email" required></label>
             </p>
 
@@ -80,7 +81,9 @@
                     <textarea name="massage" id="massage"></textarea></label>
             </p>
             <p>
-                <input type="submit" value="送信">
+                <!-- ボタンを無効化するには？利用規約に同意しないと押せないボタン disabled -->
+                <input type="submit" value="送信" disabled>
+
             </p>
     </section>
 
