@@ -27,3 +27,87 @@ body {
     変数のことをVariableという サーティファイ範囲外*/
     background-color: var(--portfolio-gray);
 }
+
+/* li.text {
+    color: red;
+} */
+
+/* 
+何番目系疑似クラス 
+
+1.-child系 なんでもかんでも数える
+:first-child 最初だけボーダーがほしいとか
+:last-child 最後だけ余白いらないとか
+:nth-child(n)
+偶数番目： even | 2n
+奇数番目: odd | 2n + 1
+
+.of-typ系 ulli指定されてる子要素だけ数える
+:first-of-type
+:last-of-type
+:nth-of-type(n)
+*/
+/* 
+li:nth-child(2n) {
+    color: red;
+} */
+
+/* of-typeを使ってpara1の文字の色をgreenにしてください */
+
+/* >子要素 */
+.sec01>p:first-of-type {
+    color: green;
+}
+
+/* childを使ってpara1の文字に下線を引いてください */
+.sec01>p:nth-child(2) {
+    text-decoration: underline dotted #000 2px;
+}
+
+/* 2番目と５番目をboldにしてください */
+/*※ 親と要素で数える※ */
+
+.sec01 ul li:nth-of-type(2) {
+    font-weight: bold;
+}
+
+/* .sec01 ul li:nth-child(2) */
+
+/* li5だけ 文字の大きさを24pxに*/
+
+.sec01 ul:nth-child(4) li:nth-child(2) {
+    font-size: 24px;
+    /* .sec01 ul:nth-of-type(2) li:nth-of-type(2) */
+}
+
+/* フォームのスタイルをリセット */
+input[type=text],
+input[type=submit],
+textarea {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    appearance: none;
+}
+
+/*  お名前とメールアドレスとメッセージ欄に太さ1px、実線、＃000のボーダーを引く*/
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid var(--portfolio-black);
+    background-color: var(--portfolio-white);
+}
+
+/* クリックした時に太くなる、フォーカスされている入力欄を強調する */
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--portfolio-green)
+}
+
+/* 必須項目のスタイルを変更する */
+/*疑似クラスに対応したセレクタがある↓平成ver */
+input:required {
+    background-color: pink;
+}
