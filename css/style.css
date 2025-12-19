@@ -1,5 +1,29 @@
 @charset "uft-8";
 
+/* カスタムプロパティ */
+
+:root {
+    /* --カスタムプロパティ名：値 */
+    /* 余白、ｆｆも設定できる */
+    --portfolio-black: #000;
+    --portfolio-white: #fff;
+    --portfolio-green: #296A65;
+    --portfolio-gray: #eee;
+    --portfolio-lite-green: #2FAC9E;
+
+    --fsz-12px: 12px;
+    --fsz-14px: 14px;
+    --fsz-16px: 16px;
+    --fsz-18px: 18px;
+    --fsz-24px: 24px;
+    --fsz-32px: 32px;
+    --fsz-48px: 48px;
+    --fsz-64px: 64px;
+
+}
+
 body {
-    background: pink;
+    /* カスタムプロパティの利用： var(プロパティ名) 
+    変数のことをVariableという サーティファイ範囲外*/
+    background-color: var(--portfolio-gray);
 }
